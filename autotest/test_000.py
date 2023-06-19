@@ -22,5 +22,5 @@ def test_setup():
 
 if __name__ == "__main__":
     test_setup()
-    test_import_flopy_gwfagmvr()
+    test_import_flopy_gwfapiag()
     test_import_agmvr()

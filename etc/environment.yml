@@ -9,3 +9,5 @@ dependencies:
   - appdirs
   - requests
   - scipy
+  - flopy >= 3.3.5
+  - modflowapi

@@ -1,47 +1,54 @@
 [![ModflowAgmvr CI](https://github.com/jlarsen-usgs/mf6api_ag/actions/workflows/ci.yml/badge.svg)](https://github.com/jlarsen-usgs/mf6api_ag/actions/workflows/ci.yml)
 
-# Modflow API Ag Package 
-This repository contains the ModflowApiAg class that interfaces with the 
-modflowapi to simulate irrigated agriculture with MODFLOW 6. The ModflowApiAg 
-api package overrides the MODFLOW 6 water mover (MVR) package and calculates
-irrigation requirement from potential and actual evapotranspiration in the 
-soil zone. Provider packages supported by API-AG include WEL, SFR, MAW, and LAK.
-The receiver package must be UZF. More information can be found in the 
-[documentation](https://github.com/jlarsen-usgs/mf6api_ag/blob/main/docs/documentation.md) 
-and example problems are located in the 
-[examples directory](https://github.com/jlarsen-usgs/mf6api_ag/tree/main/examples) 
-of this repository.
+# Modflow API Ag Package
+
+This repository contains the ModflowApiAg class that interfaces with the modflowapi to simulate irrigated agriculture with MODFLOW 6. The ModflowApiAg api package overrides the MODFLOW 6 water mover (MVR) package and calculates irrigation requirement from potential and actual evapotranspiration in the soil zone. Provider packages supported by API-AG include WEL, SFR, MAW, and LAK. The receiver package must be UZF. More information can be found in the [documentation](https://github.com/jlarsen-usgs/mf6api_ag/blob/main/docs/documentation.md) and example problems are located in the [examples directory](https://github.com/jlarsen-usgs/mf6api_ag/tree/main/examples) of this repository.
 
 ## Software requirements
-Python >= 3.7  
-flopy >= 3.3.5 (`pip install flopy`)  
-modflowapi (`pip install modflowapi`)  
-numpy  
+
+Python \>= 3.7\
+flopy \>= 3.3.5 (`pip install flopy`)\
+modflowapi (`pip install modflowapi`)\
+numpy\
 pandas
 
+For users of conda or mamba, creating the environment in the `etc/environment.yml` file will install all these automatically by executing:
+
+``` commandline
+conda env create -f environment.yml
+```
+
+or
+
+``` commandline
+mamba env create -f environment.yml
+```
+
 ## Installing mf6api_ag
+
 Open a command-line or anaconda prompt and run the following
 
-```commandline
+``` commandline
 python -m pip install https://github.com/jlarsen-usgs/mf6api_ag/archive/refs/heads/main.zip
 ```
 
-Alternatively, the user can download the repository cd into the main directory
-and run the command
-```commandline
+Alternatively, the user can download the repository cd into the main directory and run the command
+
+``` commandline
 python -m pip install .
 ```
 
 ## Importing ModflowApiAg
 
-```python
+``` python
 from mf6api_ag import ModflowApiAg
 ```
 
 ## Quickstart guide
+
 Quickstart usage for a single layer, single well AG MVR model
 
-```python
+``` python
 import flopy
 import os
 import pandas as pd
@@ -146,20 +153,17 @@ plt.show()
 ```
 
 ## Documentation
+
 Documentation can be found [here](https://github.com/jlarsen-usgs/mf6api_ag/blob/main/docs/documentation.md)
 
 ## Authors
+
 Joshua D. Larsen
 
 ## Version
+
 1.0b
 
 ## Disclaimer
-This software is preliminary or provisional and is subject to revision. It is 
-being provided to meet the need for timely best science. The software has not 
-received final approval by the U.S. Geological Survey (USGS). No warranty, 
-expressed or implied, is made by the USGS or the U.S. Government as to the 
-functionality of the software and related material nor shall the fact of 
-release constitute any such warranty. The software is provided on the condition 
-that neither the USGS nor the U.S. Government shall be held liable for any 
-damages resulting from the authorized or unauthorized use of the software.
+
+This software is preliminary or provisional and is subject to revision. It is being provided to meet the need for timely best science. The software has not received final approval by the U.S. Geological Survey (USGS). No warranty, expressed or implied, is made by the USGS or the U.S. Government as to the functionality of the software and related material nor shall the fact of release constitute any such warranty. The software is provided on the condition that neither the USGS nor the U.S. Government shall be held liable for any damages resulting from the authorized or unauthorized use of the software.
