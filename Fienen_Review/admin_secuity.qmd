@@ -1,0 +1,15 @@
+---
+title: "Administrative Security Review for Josh Larsen, MODFLOW-API-AG-Package"
+author: "Michael Fienen, UMid WSC"
+format: pdf
+---
+No issues of concern were raised in this administrative security review. The following items were evaluated for the administrative software review. My findings are included in _italics_ below each item.
+
+1. Personally identifiable information (PII)  
+_None found._
+2. Absolute file system paths  
+_All paths are relative, which in addition to better security ensures portability. Celever use was made of internal functions to direct some paths to installed packages without reporting absolute paths._
+3. Internal server host names or IP addresses  
+_None found._
+4. Usernames/passwords  
+_None found._
